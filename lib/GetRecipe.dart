@@ -65,7 +65,7 @@ class _MyAppState extends State<MyApp> {
                 }
 
                 return Column(children: <Widget>[
-                  Text(textConent),
+                  Text(snapshot.data!.recipes!.first.title!),
                   Image.network(imageLink),
                 ]);
               } else if (snapshot.hasError) {
