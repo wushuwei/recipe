@@ -1,0 +1,357 @@
+{
+  "recipes": [
+    {
+      "vegetarian": false,
+      "vegan": false,
+      "glutenFree": false,
+      "dairyFree": true,
+      "veryHealthy": true,
+      "cheap": false,
+      "veryPopular": false,
+      "sustainable": false,
+      "lowFodmap": false,
+      "weightWatcherSmartPoints": 5,
+      "gaps": "no",
+      "preparationMinutes": -1,
+      "cookingMinutes": -1,
+      "aggregateLikes": 23,
+      "healthScore": 70,
+      "pricePerServing": 139.07,
+      "extendedIngredients": [
+        {
+          "id": 11090,
+          "aisle": "Produce",
+          "image": "broccoli.jpg",
+          "consistency": "SOLID",
+          "name": "broccoli",
+          "nameClean": "broccoli",
+          "original": "4 cups broccoli, chopped",
+          "originalName": "broccoli, chopped",
+          "amount": 4.0,
+          "unit": "cups",
+          "meta": [
+            "chopped"
+          ],
+          "measures": {
+            "us": {
+              "amount": 4.0,
+              "unitShort": "cups",
+              "unitLong": "cups"
+            },
+            "metric": {
+              "amount": 946.352,
+              "unitShort": "ml",
+              "unitLong": "milliliters"
+            }
+          }
+        },
+        {
+          "id": 6194,
+          "aisle": "Canned and Jarred",
+          "image": "chicken-broth.png",
+          "consistency": "LIQUID",
+          "name": "chicken broth",
+          "nameClean": "chicken broth",
+          "original": "1 10.5-ounce can beef or chicken broth",
+          "originalName": "beef or chicken broth",
+          "amount": 10.5,
+          "unit": "ounce",
+          "meta": [
+            "canned"
+          ],
+          "measures": {
+            "us": {
+              "amount": 10.5,
+              "unitShort": "oz",
+              "unitLong": "ounces"
+            },
+            "metric": {
+              "amount": 297.67,
+              "unitShort": "g",
+              "unitLong": "grams"
+            }
+          }
+        },
+        {
+          "id": 20081,
+          "aisle": "Baking",
+          "image": "flour.png",
+          "consistency": "SOLID",
+          "name": "flour",
+          "nameClean": "wheat flour",
+          "original": "1/4 cup flour",
+          "originalName": "flour",
+          "amount": 0.25,
+          "unit": "cup",
+          "meta": [],
+          "measures": {
+            "us": {
+              "amount": 0.25,
+              "unitShort": "cups",
+              "unitLong": "cups"
+            },
+            "metric": {
+              "amount": 59.147,
+              "unitShort": "ml",
+              "unitLong": "milliliters"
+            }
+          }
+        },
+        {
+          "id": 11216,
+          "aisle": "Produce;Ethnic Foods;Spices and Seasonings",
+          "image": "ginger.png",
+          "consistency": "SOLID",
+          "name": "fresh ginger",
+          "nameClean": "ginger",
+          "original": "1/4 teaspoon fresh ginger, minced",
+          "originalName": "fresh ginger, minced",
+          "amount": 0.25,
+          "unit": "teaspoon",
+          "meta": [
+            "fresh",
+            "minced"
+          ],
+          "measures": {
+            "us": {
+              "amount": 0.25,
+              "unitShort": "tsps",
+              "unitLong": "teaspoons"
+            },
+            "metric": {
+              "amount": 0.25,
+              "unitShort": "tsps",
+              "unitLong": "teaspoons"
+            }
+          }
+        },
+        {
+          "id": 11215,
+          "aisle": "Produce",
+          "image": "garlic.png",
+          "consistency": "SOLID",
+          "name": "garlic",
+          "nameClean": "garlic",
+          "original": "1 clove garlic, minced",
+          "originalName": "garlic, minced",
+          "amount": 1.0,
+          "unit": "clove",
+          "meta": [
+            "minced"
+          ],
+          "measures": {
+            "us": {
+              "amount": 1.0,
+              "unitShort": "clove",
+              "unitLong": "clove"
+            },
+            "metric": {
+              "amount": 1.0,
+              "unitShort": "clove",
+              "unitLong": "clove"
+            }
+          }
+        },
+        {
+          "id": 23617,
+          "aisle": "Meat",
+          "image": "round-steak.jpg",
+          "consistency": "SOLID",
+          "name": "round steak",
+          "nameClean": "round steak",
+          "original": "1 pound boneless round steak, cut into bite size strips",
+          "originalName": "boneless round steak, cut into bite size strips",
+          "amount": 1.0,
+          "unit": "pound",
+          "meta": [
+            "boneless",
+            "cut into bite size strips"
+          ],
+          "measures": {
+            "us": {
+              "amount": 1.0,
+              "unitShort": "lb",
+              "unitLong": "pound"
+            },
+            "metric": {
+              "amount": 453.592,
+              "unitShort": "g",
+              "unitLong": "grams"
+            }
+          }
+        },
+        {
+          "id": 16124,
+          "aisle": "Ethnic Foods;Condiments",
+          "image": "soy-sauce.jpg",
+          "consistency": "LIQUID",
+          "name": "soy sauce",
+          "nameClean": "soy sauce",
+          "original": "2 tablespoons soy sauce",
+          "originalName": "soy sauce",
+          "amount": 2.0,
+          "unit": "tablespoons",
+          "meta": [],
+          "measures": {
+            "us": {
+              "amount": 2.0,
+              "unitShort": "Tbsps",
+              "unitLong": "Tbsps"
+            },
+            "metric": {
+              "amount": 2.0,
+              "unitShort": "Tbsps",
+              "unitLong": "Tbsps"
+            }
+          }
+        },
+        {
+          "id": 19335,
+          "aisle": "Baking",
+          "image": "sugar-in-bowl.png",
+          "consistency": "SOLID",
+          "name": "sugar",
+          "nameClean": "sugar",
+          "original": "2 tablespoons sugar",
+          "originalName": "sugar",
+          "amount": 2.0,
+          "unit": "tablespoons",
+          "meta": [],
+          "measures": {
+            "us": {
+              "amount": 2.0,
+              "unitShort": "Tbsps",
+              "unitLong": "Tbsps"
+            },
+            "metric": {
+              "amount": 2.0,
+              "unitShort": "Tbsps",
+              "unitLong": "Tbsps"
+            }
+          }
+        }
+      ],
+      "id": 641975,
+      "title": "Easy Ginger Beef Broccoli",
+      "readyInMinutes": 45,
+      "servings": 4,
+      "sourceUrl": "http://www.foodista.com/recipe/VGNCTK3S/easy-ginger-beef-broccoli",
+      "image": "https://spoonacular.com/recipeImages/641975-556x370.jpg",
+      "imageType": "jpg",
+      "summary": "Easy Ginger Beef Broccoli might be just the main course you are searching for. This recipe serves 4 and costs $1.39 per serving. One serving contains <b>252 calories</b>, <b>30g of protein</b>, and <b>6g of fat</b>. 23 people have tried and liked this recipe. If you have round steak, ginger, flour, and a few other ingredients on hand, you can make it. To use up the flour you could follow this main course with the <a href=\"https://spoonacular.com/recipes/apple-tart-with-caramel-sauce-47961\">Apple Tart with Caramel Sauce</a> as a dessert. It is a good option if you're following a <b>dairy free</b> diet. All things considered, we decided this recipe <b>deserves a spoonacular score of 97%</b>. This score is outstanding. Try <a href=\"https://spoonacular.com/recipes/ginger-beef-with-broccoli-29559\">Ginger Beef with Broccoli</a>, <a href=\"https://spoonacular.com/recipes/easy-beef-and-broccoli-276670\">Easy Beef and Broccoli</a>, and <a href=\"https://spoonacular.com/recipes/easy-beef-and-broccoli-482530\">Easy Beef and Broccoli</a> for similar recipes.",
+      "cuisines": [],
+      "dishTypes": [
+        "lunch",
+        "main course",
+        "main dish",
+        "dinner"
+      ],
+      "diets": [
+        "dairy free"
+      ],
+      "occasions": [],
+      "instructions": "<ol><li>In a small bowl, combine flour, broth, sugar, and soy sauce. Stir until sugar and flour are dissolved.</li><li>In a large skillet or wok over high heat, cook and stir beef 2 to 4 minutes, or until browned. Stir in broth mixture, ginger, garlic, and broccoli. Bring to a boil, then reduce heat. Simmer 5 to 10 minutes, or until sauce thickens.</li><li>Excellent served over rice.</li></ol>",
+      "analyzedInstructions": [
+        {
+          "name": "",
+          "steps": [
+            {
+              "number": 1,
+              "step": "In a small bowl, combine flour, broth, sugar, and soy sauce. Stir until sugar and flour are dissolved.In a large skillet or wok over high heat, cook and stir beef 2 to 4 minutes, or until browned. Stir in broth mixture, ginger, garlic, and broccoli. Bring to a boil, then reduce heat. Simmer 5 to 10 minutes, or until sauce thickens.Excellent served over rice.",
+              "ingredients": [
+                {
+                  "id": 16124,
+                  "name": "soy sauce",
+                  "localizedName": "soy sauce",
+                  "image": "soy-sauce.jpg"
+                },
+                {
+                  "id": 11090,
+                  "name": "broccoli",
+                  "localizedName": "broccoli",
+                  "image": "broccoli.jpg"
+                },
+                {
+                  "id": 11215,
+                  "name": "garlic",
+                  "localizedName": "garlic",
+                  "image": "garlic.png"
+                },
+                {
+                  "id": 11216,
+                  "name": "ginger",
+                  "localizedName": "ginger",
+                  "image": "ginger.png"
+                },
+                {
+                  "id": 1006615,
+                  "name": "broth",
+                  "localizedName": "broth",
+                  "image": "chicken-broth.png"
+                },
+                {
+                  "id": 20081,
+                  "name": "all purpose flour",
+                  "localizedName": "all purpose flour",
+                  "image": "flour.png"
+                },
+                {
+                  "id": 0,
+                  "name": "sauce",
+                  "localizedName": "sauce",
+                  "image": ""
+                },
+                {
+                  "id": 19335,
+                  "name": "sugar",
+                  "localizedName": "sugar",
+                  "image": "sugar-in-bowl.png"
+                },
+                {
+                  "id": 23572,
+                  "name": "beef",
+                  "localizedName": "beef",
+                  "image": "beef-cubes-raw.png"
+                },
+                {
+                  "id": 20444,
+                  "name": "rice",
+                  "localizedName": "rice",
+                  "image": "uncooked-white-rice.png"
+                }
+              ],
+              "equipment": [
+                {
+                  "id": 404645,
+                  "name": "frying pan",
+                  "localizedName": "frying pan",
+                  "image": "pan.png"
+                },
+                {
+                  "id": 404783,
+                  "name": "bowl",
+                  "localizedName": "bowl",
+                  "image": "bowl.jpg"
+                },
+                {
+                  "id": 404666,
+                  "name": "wok",
+                  "localizedName": "wok",
+                  "image": "wok.png"
+                }
+              ],
+              "length": {
+                "number": 7,
+                "unit": "minutes"
+              }
+            }
+          ]
+        }
+      ],
+      "sourceName": null,
+      "creditsText": null,
+      "originalId": null,
+      "spoonacularSourceUrl": "https://spoonacular.com/easy-ginger-beef-broccoli-641975"
+    }
+  ]
+}
