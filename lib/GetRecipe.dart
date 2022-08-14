@@ -2,12 +2,13 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:http/http.dart' as http;
 import 'package:my_app/RandomRecipe.dart';
 
 Future<RandomRecipe> fetchData() async {
   final String dataUrl =
-      'https://api.spoonacular.com/recipes/random?apiKey=c2943c1350bc4083a3fbc02d3a09e5b0&number=1&tags=beef,chicken';
+      'https://api.spoonacular.com/recipes/random?apiKey=c2943c1350bc4083a3fbc02d3a09e5b0&number=1&tags=chicken,cheeze';
 
   final response = await http.get(Uri.parse(dataUrl));
 
@@ -57,16 +58,19 @@ class _MyAppState extends State<MyApp> {
             future: futureRandomRecipe,
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                // return Text(snapshot.data!.recipes[0].summary);
-                String textConent = "";
-                String imageLink = "https://spoonacular.com/recipeImages/641975-556x370.jpg";
-                if(snapshot.data!.recipes!.first.summary != null){
-                  textConent = snapshot.data!.recipes!.first.summary.toString();
-                }
 
                 return Column(children: <Widget>[
                   Text(snapshot.data!.recipes!.first.title!),
-                  Image.network(imageLink),
+                  Image.network(snapshot.data!.recipes!.first.image!),
+                  Html(
+                    data: snapshot.data!.recipes!.first.summary!,
+                    // Styling with CSS (not real CSS)
+                    style: {
+                      'h1': Style(color: Colors.red),
+                      'p': Style(color: Colors.black87, fontSize: FontSize.medium),
+                      'ul': Style(margin: const EdgeInsets.symmetric(vertical: 20))
+                    },
+                  ),
                 ]);
               } else if (snapshot.hasError) {
                 return Text('${snapshot.error}');
