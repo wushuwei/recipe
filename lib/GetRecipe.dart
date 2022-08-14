@@ -66,7 +66,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           TextFormField(
             controller: textFormFieldController,
             decoration: const InputDecoration(
-              hintText: 'Enter your tags (such as chiken,beef)',
+              hintText: 'Enter your tags (such as chicken,beef)',
             ),
             validator: (String? value) {
               if (value == null || value.isEmpty) {
@@ -135,15 +135,8 @@ class _RecipeDetailsState extends State<RecipeDetails> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Bitcoin Price',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Random Recipe'),
-        ),
+    return  Scaffold(
+
         body: Center(
           child: FutureBuilder<RandomRecipe>(
             future: futureRandomRecipe,
@@ -162,6 +155,13 @@ class _RecipeDetailsState extends State<RecipeDetails> {
                       'ul': Style(margin: const EdgeInsets.symmetric(vertical: 20))
                     },
                   ),
+                  ElevatedButton(
+                    onPressed: () {
+                      // Navigate back to first route when tapped.
+                      Navigator.pop(context);
+                    },
+                    child: const Text('Go back!'),
+                  ),
                 ]);
               } else if (snapshot.hasError) {
                 return Text('${snapshot.error}');
@@ -172,7 +172,7 @@ class _RecipeDetailsState extends State<RecipeDetails> {
             },
           ),
         ),
-      ),
+
     );
   }
 }
