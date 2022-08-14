@@ -19,6 +19,10 @@ version: 1.0.0+1
 
 environment:
   sdk: ">=2.17.6 <3.0.0"
+#  sdk: ">=1.0.0 <3.0.5"
+#  v1.0.0	x64	5391447	04/12/2018	-
+# 3.0.5	x64	f1875d5	13/07/2022	2.17.6
+
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
