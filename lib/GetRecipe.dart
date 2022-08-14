@@ -6,9 +6,7 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:http/http.dart' as http;
 import 'package:my_app/RandomRecipe.dart';
 
-Future<RandomRecipe> fetchData() async {
-  final String dataUrl =
-      'https://api.spoonacular.com/recipes/random?apiKey=c2943c1350bc4083a3fbc02d3a09e5b0&number=1&tags=chicken,cheeze';
+Future<RandomRecipe> fetchData(final String dataUrl ) async {
 
   final response = await http.get(Uri.parse(dataUrl));
 
@@ -26,20 +24,113 @@ Future<RandomRecipe> fetchData() async {
 
 void main() => runApp(const MyApp());
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class MyApp extends StatelessWidget{
+  const MyApp({Key? key}) : super(key: key);
+
+  static const String _title = 'One Recipe every day';
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: _title,
+      home: Scaffold(
+        appBar: AppBar(title: const Text(_title)),
+        body: const MyStatefulWidget(),
+      ),
+    );
+  }
+
+
 }
 
-class _MyAppState extends State<MyApp> {
+class MyStatefulWidget extends StatefulWidget {
+  const MyStatefulWidget({Key? key}) : super(key: key);
+
+  @override
+  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+}
+
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  final textFormFieldController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: _formKey,
+
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          TextFormField(
+            controller: textFormFieldController,
+            decoration: const InputDecoration(
+              hintText: 'Enter your tags (such as chiken,beef)',
+            ),
+            validator: (String? value) {
+              if (value == null || value.isEmpty) {
+                return 'Please enter some text';
+              }
+              return null;
+            },
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16.0),
+            child: ElevatedButton(
+              onPressed: () {
+                // Validate will return true if the form is valid, or false if
+                // the form is invalid.
+                if (_formKey.currentState!.validate()) {
+                  // Process data.
+                  // String urlString = 'https://api.spoonacular.com/recipes/random?apiKey=c2943c1350bc4083a3fbc02d3a09e5b0&number=1&tags=chicken,cheeze';
+                  String query = textFormFieldController.text;
+                  String urlString = 'https://api.spoonacular.com/recipes/random?apiKey=c2943c1350bc4083a3fbc02d3a09e5b0&number=1&tags=';
+                  urlString += query;
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => RecipeDetails(dataUrl: urlString,)
+                    ),
+                  );
+                }
+              },
+              child: const Text('Submit'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+
+
+// final String urlString = 'https://api.spoonacular.com/recipes/random?apiKey=c2943c1350bc4083a3fbc02d3a09e5b0&number=1&tags=chicken,cheeze';
+// void main() => runApp(const RecipeDetails(String: urlString,));
+
+class RecipeDetails extends StatefulWidget {
+  const RecipeDetails({super.key, required this.dataUrl});
+
+  final String dataUrl;
+
+
+  @override
+  State<RecipeDetails> createState() => _RecipeDetailsState(dataUrl: dataUrl);
+}
+
+class _RecipeDetailsState extends State<RecipeDetails> {
   late Future<RandomRecipe> futureRandomRecipe;
+
+  _RecipeDetailsState({required this.dataUrl});
+
+  final String dataUrl;
 
   @override
   void initState() {
     super.initState();
-    futureRandomRecipe = fetchData();
+    futureRandomRecipe = fetchData(dataUrl);
   }
 
   @override
